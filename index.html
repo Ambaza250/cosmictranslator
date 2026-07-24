@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Mysteries • Grasp the Cosmos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap');
+        
+        :root {
+            --navy: #0B0C10;
+            --purple: #6A0DAD;
+            --teal: #45B7D1;
+            --white: #F5F5F5;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+        }
+        
+        .hero-bg {
+            background: radial-gradient(at center bottom, #1a1433 0%, #0B0C10 70%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(106, 13, 173, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(69, 183, 209, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255,255,255,0.08) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 4s infinite alternate;
+            z-index: 2;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+        
+        .pdf-mock {
+            background: linear-gradient(135deg, #1f2937, #111827);
+            border: 6px solid #6A0DAD;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+            position: relative;
+        }
+        
+        .pdf-mock::after {
+            content: '';
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            right: 15%;
+            bottom: 15%;
+            background: repeating-linear-gradient(
+                90deg,
+                rgba(106, 13, 173, 0.1),
+                rgba(106, 13, 173, 0.1) 8px,
+                transparent 8px,
+                transparent 24px
+            );
+        }
+        
+        .section-header {
+            position: relative;
+        }
+        
+        .section-header::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: #45B7D1;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .cta-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(69 183 209 / 0.3), 0 8px 10px -6px rgb(69 183 209 / 0.3);
+        }
+        
+        .navy-bg {
+            background-color: #0B0C10;
+        }
+    </style>
+</head>
+<body class="tail-container bg-[#0B0C10] text-[#F5F5F5] leading-relaxed">
+    <!-- HERO -->
+    <header class="hero-bg min-h-screen flex items-center relative">
+        <!-- Stars -->
+        <div class="star w-1 h-1 top-[15%] left-[10%]"></div>
+        <div class="star w-2 h-2 top-[25%] right-[15%] animation-delay-1000"></div>
+        <div class="star w-1 h-1 top-[45%] left-[25%] animation-delay-2000"></div>
+        <div class="star w-1.5 h-1.5 bottom-[30%] right-[25%]"></div>
+        <div class="star w-1 h-1 top-[65%] left-[75%] animation-delay-1500"></div>
+        
+        <div class="max-w-[1100px] mx-auto px-6 md:px-12 py-20 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left content -->
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-5 py-2 rounded-3xl text-sm border border-white/20">
+                        <span class="text-[#45B7D1] text-lg">★</span>
+                        <span class="tracking-widest uppercase text-xs font-medium">The Cosmic Translator Method</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-6xl leading-[1.1] font-bold text-white">
+                        How To Finally Grasp The Cosmos<br>Without Feeling Lost
+                    </h1>
+                    
+                    <div class="max-w-md text-lg text-[#E5E7EB]">
+                        You have heard about dark matter, black holes, and the Big Bang. Yet your mind goes blank. 
+                        Space Mysteries changes that. Using The Cosmic Translator Method, we convert complex astrophysics into everyday analogies. 
+                        No jargon. No math. Just clarity.
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://whop.com/checkout/plan_oG7lAQQrQkFaD" 
+                           target="_blank"
+                           class="cta-button bg-[#45B7D1] hover:bg-[#3AA9C0] text-[#0B0C10] font-semibold text-xl px-10 py-6 rounded-2xl flex items-center justify-center gap-3 text-center shadow-xl">
+                            <span>Get Instant Access Now</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-8 text-sm">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-download text-[#45B7D1]"></i>
+                            <span>Instant PDF</span>
+                        </div>
+                        <div class="h-4 w-px bg-white/30"></div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-[#45B7D1]"></i>
+                            <span>30-day guarantee</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-4">
+                        <div class="flex items-center gap-6 text-xs uppercase tracking-widest">
+                            <div class="flex items-center gap-1">
+                                <div class="w-6 h-px bg-[#6A0DAD]"></div>
+                                <span>5 Core Mysteries</span>
+                            </div>
+                            <div>2 Hours Total</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right visual -->
+                <div class="flex justify-center md:justify-end">
+                    <div class="pdf-mock w-full max-w-xs md:max-w-sm aspect-[5/6.2] rounded-3xl p-6 text-center flex flex-col">
+                        <div class="h-8 bg-[#6A0DAD]/80 rounded mb-8 flex items-center justify-center text-xs tracking-widest font-medium">
+                            SPACE MYSTERIES
+                        </div>
+                        
+                        <div class="flex-1 flex flex-col items-center justify-center space-y-6 border border-dashed border-[#45B7D1]/30 rounded-2xl">
+                            <!-- Cosmic graphic -->
+                            <div class="relative w-32 h-32">
+                                <!-- Circle -->
+                                <div class="absolute inset-0 border-4 border-[#45B7D1] rounded-full"></div>
+                                <!-- Inner circle -->
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 border-2 border-[#6A0DAD] rounded-full flex items-center justify-center">
+                                    <span class="text-4xl">★</span>
+                                </div>
+                                <!-- Lines -->
+                                <div class="absolute top-1/2 left-1/2 w-36 h-px bg-gradient-to-r from-transparent via-[#45B7D1] to-transparent -translate-x-1/2 -translate-y-1/2 rotate-45"></div>
+                                <div class="absolute top-1/2 left-1/2 w-36 h-px bg-gradient-to-r from-transparent via-[#45B7D1] to-transparent -translate-x-1/2 -translate-y-1/2 -rotate-45"></div>
+                            </div>
+                            
+                            <div class="space-y-1">
+                                <div class="text-[#F5F5F5] text-xl font-semibold tracking-tight">5 MYSTERIES</div>
+                                <div class="text-[#45B7D1] text-sm">DECODED</div>
+                            </div>
+                            
+                            <div class="text-[10px] uppercase text-white/60 tracking-widest pt-6">
+                                THE COSMIC TRANSLATOR
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto pt-8 text-[10px] flex justify-between text-white/60">
+                            <div>01 / 05</div>
+                            <div>DARK MATTER</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trust bar -->
+            <div class="mt-24 text-center">
+                <div class="inline-flex items-center gap-x-8 text-xs opacity-70">
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Scientifically Accurate</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Zero Jargon</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Instant Access</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center text-xs tracking-widest">
+            <div class="animate-bounce">↓</div>
+            <span class="opacity-60">SCROLL FOR CLARITY</span>
+        </div>
+    </header>
+
+    <!-- WHAT YOU GET -->
+    <section class="navy-bg py-24">
+        <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="section-header text-4xl font-bold inline-block">What You Get</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-[#111827] border border-[#6A0DAD]/30 rounded-3xl p-8 flex gap-6">
+                    <div class="text-4xl text-[#45B7D1] flex-shrink-0">★</div>
+                    <div>
+                        <div class="font-semibold text-xl mb-1">Everyday Analogy Engine</div>
+                        <div class="text-[#E5E7EB]">Turn black holes, dark matter and cosmic expansion into simple stories you already understand.</div>
+                    </div>
+                </div>
+                
+                <div class="bg-[#111827] border border-[#6A0DAD]/30 rounded-3xl p-8 flex gap-6">
+                    <div class="text-4xl text-[#45B7D1] flex-shrink-0">📝</div>
+                    <div>
+                        <div class="font-semibold text-xl mb-1">Plain English Explanations</div>
+                        <div class="text-[#E5E7EB]">Zero technical jargon. Everything explained from the ground up with crystal clarity.</div>
+                    </div>
+                </div>
+                
+                <div class="bg-[#111827] border border-[#6A0DAD]/30 rounded-3xl p-8 flex gap-6">
+                    <div class="text-4xl text-[#45B7D1] flex-shrink-0">💡</div>
+                    <div>
+                        <div class="font-semibold text-xl mb-1">"So What" Boxes</div>
+                        <div class="text-[#E5E7EB]">Discover the personal relevance of each discovery to your life and worldview.</div>
+                    </div>
+                </div>
+                
+                <div class="bg-[#111827] border border-[#6A0DAD]/30 rounded-3xl p-8 flex gap-6">
+                    <div class="text-4xl text-[#45B7D1] flex-shrink-0">🗣️</div>
+                    <div>
+                        <div class="font-semibold text-xl mb-1">3-Minute Explainer Scripts</div>
+                        <div class="text-[#E5E7EB]">Sound smart instantly. Ready-to-use scripts to share your new knowledge.</div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-2 bg-[#111827] border border-[#6A0DAD]/30 rounded-3xl p-8 flex gap-6">
+                    <div class="text-4xl text-[#45B7D1] flex-shrink-0">🗺️</div>
+                    <div class="flex-1">
+                        <div class="font-semibold text-xl mb-1">Resource Exploration Map</div>
+                        <div class="text-[#E5E7EB]">Your personal roadmap for continued discovery with trusted books, videos, and websites.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IT IS FOR -->
+    <section class="py-24 bg-[#111827]">
+        <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="section-header text-4xl font-bold inline-block">Who This Is For</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-x-16 gap-y-10 max-w-2xl mx-auto">
+                <div class="flex gap-4">
+                    <span class="text-[#45B7D1] text-2xl">01</span>
+                    <div>
+                        <div class="font-semibold">Curious beginners</div>
+                        <div class="text-sm text-[#E5E7EB]/80">who feel intimidated by science</div>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-[#45B7D1] text-2xl">02</span>
+                    <div>
+                        <div class="font-semibold">Professionals</div>
+                        <div class="text-sm text-[#E5E7EB]/80">who want to understand cosmic headlines</div>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-[#45B7D1] text-2xl">03</span>
+                    <div>
+                        <div class="font-semibold">Parents</div>
+                        <div class="text-sm text-[#E5E7EB]/80">who want to explain the universe to their kids</div>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <span class="text-[#45B7D1] text-2xl">04</span>
+                    <div>
+                        <div class="font-semibold">Lifelong learners</div>
+                        <div class="text-sm text-[#E5E7EB]/80">hungry for clear, concise knowledge</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBJECTION HANDLING -->
+    <section class="py-24 navy-bg">
+        <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="section-header text-4xl font-bold inline-block">Addressing Your Hesitations</h2>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-10">
+                <!-- Obstacle 1 -->
+                <div class="bg-[#1F2937] rounded-3xl p-8 border-l-4 border-[#45B7D1]">
+                    <div class="font-semibold text-lg mb-3">"Too complex for me?"</div>
+                    <p class="text-[#E5E7EB]">This guide uses no math and no jargon. Every concept starts with a daily life analogy that makes the cosmos feel approachable.</p>
+                </div>
+                
+                <!-- Obstacle 2 -->
+                <div class="bg-[#1F2937] rounded-3xl p-8 border-l-4 border-[#45B7D1]">
+                    <div class="font-semibold text-lg mb-3">"I don't have time."</div>
+                    <p class="text-[#E5E7EB]">The full guide takes under 2 hours. Each mystery stands alone so you can read in short sessions whenever you like.</p>
+                </div>
+                
+                <!-- Obstacle 3 -->
+                <div class="bg-[#1F2937] rounded-3xl p-8 border-l-4 border-[#45B7D1]">
+                    <div class="font-semibold text-lg mb-3">"Is this scientifically accurate?"</div>
+                    <p class="text-[#E5E7EB]">Yes. All content is based on established scientific consensus and reviewed for accuracy before translation into plain English.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 pt-8">
+                    <!-- Misconception 1 -->
+                    <div>
+                        <div class="uppercase text-xs tracking-widest text-[#6A0DAD] mb-2">MISCONCEPTION</div>
+                        <div class="font-semibold">"I need a physics degree to understand."</div>
+                        <div class="text-[#E5E7EB] mt-3 text-sm">False. This guide assumes zero background. It was built specifically for non-scientists.</div>
+                    </div>
+                    
+                    <!-- Misconception 2 -->
+                    <div>
+                        <div class="uppercase text-xs tracking-widest text-[#6A0DAD] mb-2">MISCONCEPTION</div>
+                        <div class="font-semibold">"It is just another boring textbook."</div>
+                        <div class="text-[#E5E7EB] mt-3 text-sm">False. This is a visually designed, conversational guide focused on clarity and retention.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24 bg-[#111827]">
+        <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="section-header text-4xl font-bold inline-block">Real Results From Real Readers</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#0B0C10] p-8 rounded-3xl border border-white/10">
+                    <div class="italic text-lg mb-8">"I finally understand what dark matter actually is. The analogy clicked instantly."</div>
+                    <div class="text-sm">
+                        <div class="font-medium">[Sarah K.], Portland</div>
+                    </div>
+                </div>
+                
+                <div class="bg-[#0B0C10] p-8 rounded-3xl border border-white/10">
+                    <div class="italic text-lg mb-8">"I used the 3 Minute Script on my son. He got it. This works."</div>
+                    <div class="text-sm">
+                        <div class="font-medium">[Michael T.], Engineer • Austin</div>
+                    </div>
+                </div>
+                
+                <div class="bg-[#0B0C10] p-8 rounded-3xl border border-white/10">
+                    <div class="italic text-lg mb-8">"The Cosmic Timeline alone changed how I see our place in the universe."</div>
+                    <div class="text-sm">
+                        <div class="font-medium">[Elena R.], Barcelona</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUE STACK -->
+    <section class="py-24 navy-bg">
+        <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+            <div class="bg-[#111827] border border-[#6A0DAD]/40 rounded-3xl p-12 max-w-2xl mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="text-4xl font-bold">Total Value</h2>
+                    <div class="text-[#45B7D1] text-sm mt-2 tracking-widest">INSTANT ACCESS • ONE TIME PAYMENT</div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="flex justify-between items-center">
+                        <div>Core Mystery Guide</div>
+                        <div class="line-through text-white/50">$50</div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>Cosmic Timeline Infographic</div>
+                        <div class="line-through text-white/50">$15</div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>Mystery Ranking Scorecard</div>
+                        <div class="line-through text-white/50">$14</div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>3 Minute Explainer Scripts</div>
+                        <div class="line-through text-white/50">$15</div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>Beyond Guide Resource Map</div>
+                        <div class="line-through text-white/50">$10</div>
+                    </div>
+                    
+                    <div class="h-px bg-white/10 my-6"></div>
+                    
+                    <div class="flex justify-between items-baseline">
+                        <div class="text-xl">Total Value</div>
+                        <div class="text-3xl line-through text-white/60">$104</div>
+                    </div>
+                    
+                    <div class="pt-8 border-t border-white/10">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <div class="uppercase text-xs text-[#45B7D1]">Your Price Today</div>
+                                <div class="text-5xl font-bold text-[#45B7D1]">$47</div>
+                            </div>
+                            <a href="https://whop.com/checkout/plan_oG7lAQQrQkFaD" 
+                               target="_blank"
+                               class="cta-button bg-[#45B7D1] text-[#0B0C10] px-12 py-6 rounded-2xl font-semibold text-xl inline-flex items-center gap-3">
+                                GET IT NOW
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center text-xs text-white/60 mt-10">
+                    One-time payment. Lifetime access. Instant download.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIQUENESS -->
+    <section class="py-24 bg-[#111827]">
+        <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="section-header text-4xl font-bold inline-block">Us vs Typical Science Content</h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto overflow-hidden rounded-3xl border border-[#6A0DAD]/30">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-[#0B0C10]">
+                            <th class="py-8 px-8 text-left font-normal text-white/70">TYPICAL SCIENCE CONTENT</th>
+                            <th class="py-8 px-8 text-left font-semibold text-[#45B7D1]">SPACE MYSTERIES</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/10 text-sm">
+                        <tr>
+                            <td class="py-8 px-8">Uses heavy jargon</td>
+                            <td class="py-8 px-8 bg-[#1F2937]">Uses daily life analogies first</td>
+                        </tr>
+                        <tr>
+                            <td class="py-8 px-8">No context, just facts</td>
+                            <td class="py-8 px-8 bg-[#1F2937]">Explains why each mystery matters to you</td>
+                        </tr>
+                        <tr>
+                            <td class="py-8 px-8">Leaves you with questions</td>
+                            <td class="py-8 px-8 bg-[#1F2937]">Gives you scripts to teach others</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 navy-bg">
+        <div class="max-w-[1100px] mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <h2 class="section-header text-4xl font-bold inline-block">Quick Answers</h2>
+            </div>
+            
+            <div class="max-w-2xl mx-auto space-y-8">
+                <div class="border border-white/10 rounded-3xl p-8">
+                    <div class="font-semibold mb-3">Do I need any science background?</div>
+                    <div class="text-[#E5E7EB]">Absolutely not. This guide assumes zero prior knowledge. Everything is explained from first principles using daily life examples.</div>
+                </div>
+                
+                <div class="border border-white/10 rounded-3xl p-8">
+                    <div class="font-semibold mb-3">How long does it take to go through?</div>
+                    <div class="text-[#E5E7EB]">About 90 to 120 minutes for the full guide. Each mystery takes roughly 15 to 20 minutes.</div>
+                </div>
+                
+                <div class="border border-white/10 rounded-3xl p-8">
+                    <div class="font-semibold mb-3">Will this help me understand science news?</div>
+                    <div class="text-[#E5E7EB]">Yes. Once you grasp these 5 core mysteries, you will recognize them in headlines and finally understand what researchers are talking about.</div>
+                </div>
+                
+                <div class="border border-white/10 rounded-3xl p-8">
+                    <div class="font-semibold mb-3">Is this a video or a PDF?</div>
+                    <div class="text-[#E5E7EB]">It is a beautifully designed PDF guide you can read on any device. Print it, save it, or keep it on your phone for quick reference.</div>
+                </div>
+                
+                <div class="border border-white/10 rounded-3xl p-8">
+                    <div class="font-semibold mb-3">What if I am not satisfied?</div>
+                    <div class="text-[#E5E7EB]">You have 30 days to request a full refund. No questions asked. Your understanding is our priority.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-28 bg-gradient-to-b from-[#111827] to-[#0B0C10]">
+        <div class="max-w-[1100px] mx-auto px-6 md:px-12 text-center">
+            <div class="max-w-lg mx-auto">
+                <h2 class="text-5xl font-bold leading-tight mb-6">Ready To Understand The Cosmos?</h2>
+                <p class="text-xl text-[#E5E7EB] mb-10">
+                    Get the complete Space Mysteries guide with The Cosmic Translator Method. PDF format. 30 day guarantee.
+                </p>
+                
+                <a href="https://whop.com/checkout/plan_oG7lAQQrQkFaD" 
+                   target="_blank"
+                   class="cta-button inline-flex bg-[#45B7D1] hover:bg-[#3AA9C0] text-[#0B0C10] font-semibold text-2xl px-16 py-8 rounded-3xl items-center gap-4 shadow-2xl">
+                    GET INSTANT ACCESS NOW
+                    <i class="fa-solid fa-rocket"></i>
+                </a>
+                
+                <div class="mt-8 flex justify-center items-center gap-8 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-lock text-[#45B7D1]"></i>
+                        <span>Secure checkout</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-download text-[#45B7D1]"></i>
+                        <span>Instant download</span>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-xs text-white/60 max-w-xs mx-auto">
+                    If you are not satisfied within 30 days, we will refund you fully. No questions.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 text-center text-xs text-white/40">
+        <div class="max-w-[1100px] mx-auto px-6">
+            © 2026 Space Mysteries. All rights reserved.<br>
+            This is a digital product. Access granted immediately after purchase.
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already loaded
+        function initializeStars() {
+            const stars = document.querySelectorAll('.star');
+            stars.forEach((star, i) => {
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = (Math.random() * 3) + 's';
+                const size = Math.random() * 3 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+            });
+        }
+        
+        window.onload = function() {
+            initializeStars();
+        };
+    </script>
+</body>
+</html>
