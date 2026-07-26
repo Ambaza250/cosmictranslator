@@ -1,0 +1,20 @@
+{
+  "name": "cosmictranslator",
+  "version": "1.0.0",
+  "description": "Space Mysteries - Grasp the Cosmos",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static HTML project - no build step required'"
+  },
+  "keywords": [
+    "space",
+    "astronomy",
+    "education"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
